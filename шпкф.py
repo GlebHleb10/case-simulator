@@ -3,7 +3,7 @@ import pygame
 
 did = "дигл деректива"
 scar = "скар наёмник"
-dib = "дигл бронзовый"
+voy1 = "вой"
 dlor = "драгонлор"
 
 screen = pygame.display.set_mode((800, 600))
@@ -25,8 +25,10 @@ stena = pygame.image.load("1593698890_6-p-kirpichnii-fon-11.jpg")
 stena = pygame.transform.scale(stena, (800, 600))
 directiva = pygame.image.load("s802.png")
 directiva = pygame.transform.scale(directiva, (600, 400))
-choise = [directiva,dragonlore]
-drop = random.choice(choise)
+voy = pygame.image.load("image4.png")
+voy = pygame.transform.scale(voy, (600, 400))
+# choise = [directiva,dragonlore]
+# drop = random.choice(choise)
 pygame.init()
 screen.blit(menu, (0, 0))
 x1 = 255
@@ -40,20 +42,43 @@ y4 = 528
 # screen2 =pygame.display.set_mode((800,600))
 pygame.display.flip()
 
+
+def randomizer():
+    drop = random.randint(1, 1000)
+    if 1 <= drop <= 5:
+        return dlor
+    elif 6 <= drop <= 300:
+        return did
+    elif 301 <= drop <= 500:
+        return voy1
+    elif 501 <= drop <= 1000:
+        return scar
+
+def start():
+    fon = pygame.image.load("14160044614l.jpg")
+    fon = pygame.transform.scale(fon, (800, 600))
+    screen.blit(fon, (0, 0))
+    screen.blit(open, (320, 500))
+    pygame.display.flip()
+
 while True:
     pos = pygame.mouse.get_pos()
-
     for e in pygame.event.get():
         if e.type == pygame.QUIT:
             exit()
         if e.type == pygame.MOUSEBUTTONDOWN:
             if x3 < pos[0] < x4 and y3 < pos[1] < y4:
                 screen.blit(stena, (0, 0))
-                if drop == dragonlore:
-                    screen.blit(drop, (0, 170))
+                x = randomizer()
+                print(x)
+                if x == dlor:
+                    screen.blit(dragonlorе, (0, 170))
                     pygame.display.flip()
-                if drop == directiva:
-                    screen.blit(drop, (150, 170))
+                if x == did:
+                    screen.blit(directiva, (150, 170))
+                    pygame.display.flip()
+                if x == voy1:
+                    screen.blit(voy, (150, 170))
                     pygame.display.flip()
 
             if x1 < pos[0] < x2 and y1 < pos[1] < y2:
