@@ -18,12 +18,18 @@ chfon = pygame.image.load("1614281824_11-p-chernii-fon-kartinka-bez-risunka-13.j
 chfon = pygame.transform.scale(chfon,(400,600))
 case = pygame.image.load("img-YyGw2L5PVlcBNJRQ-w1370.png")
 case = pygame.transform.scale(case,(260,230))
+open = pygame.image.load("ккк.jpg")
+open = pygame.transform.scale(open,(150,30))
 pygame.init()
 screen.blit(menu,(0,0))
 x1 = 255
 x2 =488
 y1 =513
 y2 =547
+x3 = 319
+x4 =469
+y3 =499
+y4 =528
 # screen2 =pygame.display.set_mode((800,600))
 pygame.display.flip()
 
@@ -35,6 +41,8 @@ while True:
         if e.type==pygame.QUIT:
             exit()
         if e.type == pygame.MOUSEBUTTONDOWN:
+            if x3 < pos[0] < x4 and y3 < pos[1] < y4:
+                print(1)
             if x1 < pos[0] < x2 and y1 < pos[1] < y2:
                 x1 = 0
                 x2 = 0
@@ -46,7 +54,7 @@ while True:
                 screen.blit(fon, (0, 0))
                 screen.blit(chfon, (200, 0))
                 screen.blit(case, (280, 250))
-
+                screen.blit(open, (320, 500))
                 pygame.display.flip()
 
 # def method_name():
