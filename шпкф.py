@@ -5,7 +5,7 @@ did = "дигл деректива"
 scar = "скар наёмник"
 dib = "дигл бронзовый"
 dlor = "драгонлор"
-drop = random.randint(1, 100)
+
 screen = pygame.display.set_mode((800, 600))
 menu = pygame.image.load("Безымянный.png")
 menu = pygame.transform.scale(menu, (800, 600))
@@ -24,8 +24,9 @@ dragonlore = pygame.transform.scale(dragonlore, (800, 600))
 stena = pygame.image.load("1593698890_6-p-kirpichnii-fon-11.jpg")
 stena = pygame.transform.scale(stena, (800, 600))
 directiva = pygame.image.load("s802.png")
-directiva = pygame.transform.scale(directiva, (800, 600))
-
+directiva = pygame.transform.scale(directiva, (600, 400))
+choise = [directiva,dragonlore]
+drop = random.choice(choise)
 pygame.init()
 screen.blit(menu, (0, 0))
 x1 = 255
@@ -48,8 +49,13 @@ while True:
         if e.type == pygame.MOUSEBUTTONDOWN:
             if x3 < pos[0] < x4 and y3 < pos[1] < y4:
                 screen.blit(stena, (0, 0))
-                screen.blit(directiva, (0, 0))
-                pygame.display.flip()
+                if drop == dragonlore:
+                    screen.blit(drop, (0, 170))
+                    pygame.display.flip()
+                if drop == directiva:
+                    screen.blit(drop, (150, 170))
+                    pygame.display.flip()
+
             if x1 < pos[0] < x2 and y1 < pos[1] < y2:
                 x1 = 0
                 x2 = 0
