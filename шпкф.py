@@ -19,6 +19,10 @@ case = pygame.image.load("img-YyGw2L5PVlcBNJRQ-w1370.png")
 case = pygame.transform.scale(case, (260, 230))
 open = pygame.image.load("ккк.jpg")
 open = pygame.transform.scale(open, (150, 30))
+dragonlore = pygame.image.load("image2.png")
+dragonlore = pygame.transform.scale(dragonlore, (800, 600))
+stena = pygame.image.load("1593698890_6-p-kirpichnii-fon-11.jpg")
+stena = pygame.transform.scale(stena, (800, 600))
 pygame.init()
 screen.blit(menu, (0, 0))
 x1 = 255
@@ -40,7 +44,9 @@ while True:
             exit()
         if e.type == pygame.MOUSEBUTTONDOWN:
             if x3 < pos[0] < x4 and y3 < pos[1] < y4:
-                print(1)
+                screen.blit(stena, (0, 0))
+                screen.blit(dragonlore, (0, 0))
+                pygame.display.flip()
             if x1 < pos[0] < x2 and y1 < pos[1] < y2:
                 x1 = 0
                 x2 = 0
