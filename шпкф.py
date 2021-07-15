@@ -3,8 +3,9 @@ import pygame
 
 did = "дигл деректива"
 scar = "скар наёмник"
-voy1 = "вой"
+stattrackvoy1 = "вой"
 dlor = "драгонлор"
+
 
 screen = pygame.display.set_mode((800, 600))
 menu = pygame.image.load("Безымянный.png")
@@ -20,7 +21,7 @@ case = pygame.transform.scale(case, (260, 230))
 open = pygame.image.load("ккк.jpg")
 open = pygame.transform.scale(open, (150, 30))
 dragonlore = pygame.image.load("image2.png")
-dragonlorе = pygame.transform.scale(dragonlore, (800, 600))
+dragonlore = pygame.transform.scale(dragonlore, (800, 600))
 stena = pygame.image.load("1593698890_6-p-kirpichnii-fon-11.jpg")
 stena = pygame.transform.scale(stena, (800, 600))
 directiva = pygame.image.load("s802.png")
@@ -49,8 +50,8 @@ def randomizer():
         return dlor
     elif 6 <= drop <= 300:
         return did
-    elif 301 <= drop <= 500:
-        return voy1
+    elif 1 <= drop <= 3:
+        return stattrackvoy1
     elif 501 <= drop <= 1000:
         return scar
 
@@ -72,12 +73,12 @@ while True:
                 x = randomizer()
                 print(x)
                 if x == dlor:
-                    screen.blit(dragonlorе, (0, 170))
+                    screen.blit(dragonlore, (0, 170))
                     pygame.display.flip()
                 if x == did:
                     screen.blit(directiva, (150, 170))
                     pygame.display.flip()
-                if x == voy1:
+                if x == stattrackvoy1:
                     screen.blit(voy, (150, 170))
                     pygame.display.flip()
 
