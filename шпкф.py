@@ -1,0 +1,116 @@
+import random
+import os
+import turtle
+import pygame
+did ="дигл деректива"
+scar ="скар наёмник"
+dib ="дигл бронзовый"
+dlor ="драгонлор"
+drop = random.randint(1, 100)
+screen = pygame.display.set_mode((800,600))
+menu = pygame.image.load("Безымянный.png")
+menu = pygame.transform.scale(menu,(800,600))
+loading = pygame.image.load("thumb-1920-895715.png")
+loading = pygame.transform.scale(loading,(800,600))
+fon = pygame.image.load("14160044614l.jpg")
+fon = pygame.transform.scale(fon,(800,600))
+chfon = pygame.image.load("1614281824_11-p-chernii-fon-kartinka-bez-risunka-13.jpg")
+chfon = pygame.transform.scale(chfon,(400,600))
+case = pygame.image.load("img-YyGw2L5PVlcBNJRQ-w1370.png")
+case = pygame.transform.scale(case,(260,230))
+pygame.init()
+screen.blit(menu,(0,0))
+x1 = 255
+x2 =488
+y1 =513
+y2 =547
+# screen2 =pygame.display.set_mode((800,600))
+pygame.display.flip()
+
+
+while True:
+    pos = pygame.mouse.get_pos()
+
+    for e in pygame.event.get():
+        if e.type==pygame.QUIT:
+            exit()
+        if e.type == pygame.MOUSEBUTTONDOWN:
+            if x1 < pos[0] < x2 and y1 < pos[1] < y2:
+                x1 = 0
+                x2 = 0
+                y1 = 0
+                y2 = 0
+                screen.blit(loading,(0,0))
+                pygame.display.flip()
+                pygame.time.delay(3000)
+                screen.blit(fon, (0, 0))
+                screen.blit(chfon, (200, 0))
+                screen.blit(case, (280, 250))
+
+                pygame.display.flip()
+
+# def method_name():
+#     name = print("ваше имя: ")
+#     try:
+#         os.chdir(rf"C:\Users\Глеб\Desktop\пользоваели симулятора\{name}")
+#     except:
+#         s = input('такого пользователя нет. создать?')
+#         if s == "да":
+#             os.makedirs(rf"C:\Users\Глеб\Desktop\пользоваели симулятора\{name}")
+#             os.chdir(rf"C:\Users\Глеб\Desktop\пользоваели симулятора\{name}")
+#             file = open(rf"C:\Users\Глеб\Desktop\пользоваели симулятора\{name}\инвентарь.txt", "w", encoding='utf-8')
+#             file.close()
+#             file1 = open(rf"C:\Users\Глеб\Desktop\пользоваели симулятора\{name}\деньги.txt", "w", encoding='utf-8')
+#             file1.write('0')
+#             file1.close()
+#         if s == "нет":
+#             exit()
+#     v = input("читкод?")
+#     while True:
+#
+#         if v == "give$money!":
+#             money = int(input())
+#             file1 = open(rf"C:\Users\Глеб\Desktop\пользоваели симулятора\{name}\деньги.txt", "r", encoding='utf-8')
+#             now_money = int(file1.read())
+#             file1.close()
+#             file1 = open(rf"C:\Users\Глеб\Desktop\пользоваели симулятора\{name}\деньги.txt", "w", encoding='utf-8')
+#             b = money + now_money
+#             file1.write(str(b))
+#             file1.close()
+#         if v == "нет":
+#             pass
+#         c = input("что хотите сделать?посмотреть инвентарь\посмотреть деньги\выйти ")
+#
+#         if c == "посмотреть инвентарь":
+#             with open(rf"C:\Users\Глеб\Desktop\пользоваели симулятора\{name}\инвентарь.txt", "r",
+#                       encoding='utf-8') as file:
+#                 data = file.read()
+#                 if data:
+#                     print(data)
+#                 else:
+#                     print('рюкзак пуст')
+#         elif c == "посмотреть деньги":
+#             with open(rf"C:\Users\Глеб\Desktop\пользоваели симулятора\{name}\деньги.txt", "r",
+#                       encoding='utf-8') as file:
+#                 data = file.read()
+#                 print(data)
+#         elif c == 'выйти':
+#             method_name()
+#         else:
+#             print('такой команды нет')
+#
+#
+#
+# method_name()
+
+
+#if 1 <= drop <= 100:
+# elif 6 <= drop <= 300:
+#     print(did)
+# elif 301 <= drop <= 500:
+#     print(dib)
+# elif 501 <= drop <= 1000:
+#     print(scar)
+# print(drop)
+
+
