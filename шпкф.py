@@ -7,13 +7,13 @@ stattrackvoy1 = "StatTrak™ M4A4 | Вой"
 dlor = "AWP | История о драконе"
 
 
-screen = pygame.display.set_mode((1920, 1680))
+screen = pygame.display.set_mode((800, 600))
 menu = pygame.image.load("Безымянный.png")
-menu = pygame.transform.scale(menu, (1920, 1680))
+menu = pygame.transform.scale(menu, (800, 600))
 loading = pygame.image.load("thumb-1920-895715.png")
-loading = pygame.transform.scale(loading, (1920, 1680))
+loading = pygame.transform.scale(loading, (800, 600))
 fon = pygame.image.load("14160044614l.jpg")
-fon = pygame.transform.scale(fon, (1920, 1680))
+fon = pygame.transform.scale(fon, (800, 600))
 chfon = pygame.image.load("1614281824_11-p-chernii-fon-kartinka-bez-risunka-13.jpg")
 chfon = pygame.transform.scale(chfon, (400, 600))
 case = pygame.image.load("img-YyGw2L5PVlcBNJRQ-w1370.png")
