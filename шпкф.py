@@ -1,19 +1,19 @@
 import random
 import pygame
 
-did = "дигл деректива"
-scar = "скар наёмник"
-stattrackvoy1 = "вой"
-dlor = "драгонлор"
+did = "Desert Eagle | Директива"
+scar = "SCAR-20 | Наемникs"
+stattrackvoy1 = "StatTrak™ M4A4 | Вой"
+dlor = "AWP | История о драконе"
 
 
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((1920, 1680))
 menu = pygame.image.load("Безымянный.png")
-menu = pygame.transform.scale(menu, (800, 600))
+menu = pygame.transform.scale(menu, (1920, 1680))
 loading = pygame.image.load("thumb-1920-895715.png")
-loading = pygame.transform.scale(loading, (800, 600))
+loading = pygame.transform.scale(loading, (1920, 1680))
 fon = pygame.image.load("14160044614l.jpg")
-fon = pygame.transform.scale(fon, (800, 600))
+fon = pygame.transform.scale(fon, (1920, 1680))
 chfon = pygame.image.load("1614281824_11-p-chernii-fon-kartinka-bez-risunka-13.jpg")
 chfon = pygame.transform.scale(chfon, (400, 600))
 case = pygame.image.load("img-YyGw2L5PVlcBNJRQ-w1370.png")
@@ -50,7 +50,7 @@ def randomizer():
         return dlor
     elif 6 <= drop <= 300:
         return did
-    elif 1 <= drop <= 3:
+    elif 301 <= drop <= 304:
         return stattrackvoy1
     elif 501 <= drop <= 1000:
         return scar
@@ -79,7 +79,7 @@ while True:
                     screen.blit(directiva, (150, 170))
                     pygame.display.flip()
                 if x == stattrackvoy1:
-                    screen.blit(voy, (150, 170))
+                    screen.blit(voy, (0, 170))
                     pygame.display.flip()
 
             if x1 < pos[0] < x2 and y1 < pos[1] < y2:
