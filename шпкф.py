@@ -30,8 +30,6 @@ voy = pygame.image.load("image4.png")
 voy = pygame.transform.scale(voy, (600, 400))
 neonr = pygame.image.load("s799.png")
 neonr = pygame.transform.scale(neonr, (600, 400))
-neonr = pygame.image.load("s799.png")
-neonr = pygame.transform.scale(neonr, (600, 400))
 kill = pygame.image.load("image6.png")
 kill = pygame.transform.scale(kill, (600, 400))
 # choise = [directiva,dragonlore]
@@ -58,8 +56,11 @@ def randomizer():
         return did
     elif 301 <= drop <= 304:
         return stattrackvoy1
-    elif 501 <= drop <= 1000:
-        return scar
+    if 305<=drop<=400:
+        return neonr
+    if 401<=drop<=451:
+        return kill
+
 
 def start():
     fon = pygame.image.load("14160044614l.jpg")
