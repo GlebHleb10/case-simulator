@@ -5,6 +5,7 @@ did = "Desert Eagle | Директива"
 scar = "SCAR-20 | Наемникs"
 stattrackvoy1 = "StatTrak™ M4A4 | Вой"
 dlor = "AWP | История о драконе"
+sdlor=""
 
 
 screen = pygame.display.set_mode((800, 600))
@@ -28,6 +29,7 @@ directiva = pygame.image.load("s802.png")
 directiva = pygame.transform.scale(directiva, (600, 400))
 voy = pygame.image.load("image4.png")
 voy = pygame.transform.scale(voy, (600, 400))
+soudlor=pygame.image.load("souvenirawpdragonlore.png")
 # choise = [directiva,dragonlore]
 # drop = random.choice(choise)
 pygame.init()
