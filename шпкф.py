@@ -30,10 +30,10 @@ voy = pygame.image.load("image4.png")
 voy = pygame.transform.scale(voy, (600, 400))
 neonr = pygame.image.load("s799.png")
 neonr = pygame.transform.scale(neonr, (600, 400))
-neonr = pygame.image.load("s799.png")
-neonr = pygame.transform.scale(neonr, (600, 400))
 kill = pygame.image.load("image6.png")
 kill = pygame.transform.scale(kill, (600, 400))
+vopr = pygame.image.load("kartinki-znak-voprosa-4.jpg")
+vopr = pygame.transform.scale(vopr, (600, 400))
 # choise = [directiva,dragonlore]
 # drop = random.choice(choise)
 pygame.init()
@@ -48,6 +48,14 @@ y3 = 499
 y4 = 528
 # screen2 =pygame.display.set_mode((800,600))
 pygame.display.flip()
+
+def crutilka():
+    ls = []
+    for i in range(10):
+        a = screen.blit(vopr,(i*50-400,300))
+    pygame.display.flip()
+    pygame.time.delay(500)
+
 
 
 def randomizer():
@@ -76,6 +84,7 @@ while True:
         if e.type == pygame.MOUSEBUTTONDOWN:
             if x3 < pos[0] < x4 and y3 < pos[1] < y4:
                 screen.blit(stena, (0, 0))
+                crutilka()
                 x = randomizer()
                 print(x)
                 if x == dlor:
