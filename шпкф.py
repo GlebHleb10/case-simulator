@@ -5,7 +5,8 @@ did = "Desert Eagle | Директива"
 scar = "SCAR-20 | Наемникs"
 stattrackvoy1 = "StatTrak™ M4A4 | Вой"
 dlor = "AWP | История о драконе"
-
+neonrevolution = "AK-47 | Неоновая революция"
+buzzkill="USP-S | Подтвержденное убийство"
 
 screen = pygame.display.set_mode((800, 600))
 menu = pygame.image.load("Безымянный.png")
@@ -66,8 +67,11 @@ def randomizer():
         return did
     elif 301 <= drop <= 304:
         return stattrackvoy1
-    elif 501 <= drop <= 1000:
-        return scar
+    if 305 <= drop <= 400:
+        return neonrevolution
+    if 401 <= drop <= 451:
+        return buzzkill
+
 
 def start():
     fon = pygame.image.load("14160044614l.jpg")
@@ -75,6 +79,7 @@ def start():
     screen.blit(fon, (0, 0))
     screen.blit(open, (320, 500))
     pygame.display.flip()
+
 
 while True:
     pos = pygame.mouse.get_pos()
@@ -96,6 +101,13 @@ while True:
                 if x == stattrackvoy1:
                     screen.blit(voy, (0, 170))
                     pygame.display.flip()
+                if x ==neonrevolution:
+                    screen.blit(neonr,(150,170))
+                    pygame.display.flip()
+                if x ==buzzkill:
+                    screen.blit(kill,(150,170))
+                    pygame.display.flip()
+
 
             if x1 < pos[0] < x2 and y1 < pos[1] < y2:
                 x1 = 0
