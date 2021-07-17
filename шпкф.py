@@ -48,7 +48,7 @@ def randomizer():
     drop = random.randint(1, 1000)
     if 1 <= drop <= 10:
         return dlor
-    elif 6 <= drop <= 300:
+    elif 11 <= drop <= 300:
         return did
     elif 301 <= drop <= 304:
         return stattrackvoy1
